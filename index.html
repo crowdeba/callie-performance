@@ -288,6 +288,11 @@
       <p class="small" style="margin-top:6px;">If swim fatigue is unusually high, communicate with the coach and adjust rather than forcing the workout. That's not weakness &mdash; that's smart training.</p>
     </div>
 
+    <div class="card accent-charcoal" style="margin-top:14px;">
+      <h3>Ankle Note</h3>
+      <div id="ankle-status-content" style="margin-top:8px;"><p class="small">Loading...</p></div>
+    </div>
+
     <div class="card accent-red" style="margin-top:28px;">
       <span class="eyebrow">Phase Progression</span>
       <h3 style="margin-top:6px;">Foundation &rarr; Strength &rarr; Race Power</h3>
@@ -401,6 +406,14 @@ var CONFIG = {
   hsChampionships: "Individual high school meets will be added closer to the HS season.",
   athleteName: "Callie Gibbons",
 
+  // Ankle history from last year — appears resolved, kept on file just in case.
+  // Edit via Coach Mode if anything changes.
+  ankleStatus: {
+    note: "History of ankle discomfort last year — currently appears resolved. If it ever feels off during single-leg or jumping work, ease up and tell your coach.",
+    coachNotes: "",
+    lastUpdated: ""
+  },
+
   program: {
     1: {
       mon: {label:"Lower + Pull", note:"You already work hard — this isn't about making things harder for the sake of it. It's about giving your competitiveness and work ethic more physical tools to actually use.", exercises:[
@@ -409,7 +422,7 @@ var CONFIG = {
         {type:"sets", name:"Lat Pulldown", sets:["8","8","8"], rest:"90 sec", cue:"Pull with your back — full range of motion, control the return."},
         {type:"sets", name:"Chest-Supported Row", sets:["8","8","8"], rest:"75 sec", cue:"Pull smoothly and finish with a strong upper-back squeeze."},
         {type:"sets", name:"Bulgarian Split Squat", sets:["6/leg","6/leg"], rest:"75 sec", cue:"Stay balanced and controlled — build strength one leg at a time."},
-        {type:"sets", name:"Single-Leg Calf Raise", sets:["10/leg","10/leg"], rest:"60 sec", cue:"Full range — push through the floor like you're driving off a wall."}
+        {type:"sets", name:"Single-Leg Calf Raise", sets:["10/leg","10/leg"], rest:"60 sec", cue:"Full range — push through the floor like you're driving off a wall. Ease up if your ankle feels off."}
       ]},
       wed: {label:"Upper + Core", note:"Quality strength that transfers, not volume for volume's sake.", exercises:[
         {type:"sets", name:"DB Bench Press", sets:["8","8","8"], rest:"90 sec", cue:"Controlled lowering, strong drive upward."},
@@ -435,7 +448,7 @@ var CONFIG = {
         {type:"sets", name:"Lat Pulldown", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Pull hard and control the return."},
         {type:"sets", name:"Chest-Supported Row", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Challenge yourself with weight while maintaining perfect positioning."},
         {type:"sets", name:"Bulgarian Split Squat", sets:["8/leg","8/leg"], rest:"75 sec", cue:"Build single-leg strength and control."},
-        {type:"sets", name:"Single-Leg Calf Raise", sets:["10/leg","10/leg"], rest:"60 sec", cue:"Push through the floor with intent."}
+        {type:"sets", name:"Single-Leg Calf Raise", sets:["10/leg","10/leg"], rest:"60 sec", cue:"Push through the floor with intent. Ease up if your ankle feels off."}
       ]},
       wed: {label:"Upper + Core", note:"Same idea, heavier. Try slightly less assistance on pull-ups than Phase 1 — that's real, visible progress.", exercises:[
         {type:"sets", name:"DB Bench Press", sets:["6","6","6"], rest:"90 sec", cue:"Lower under control, drive the weight upward aggressively."},
@@ -460,8 +473,8 @@ var CONFIG = {
         {type:"sets", name:"Squat Jump", sets:["3","3","3"], rest:"60-90 sec", cue:"Jump as explosively as possible — focus on speed, not fatigue."},
         {type:"sets", name:"Hip Thrust", sets:["5","5","5"], rest:"90 sec", cue:"Drive up aggressively and finish with control."},
         {type:"sets", name:"Lat Pulldown", sets:["5","5","5"], rest:"90 sec", cue:"Powerful pull with a controlled return."},
-        {type:"sets", name:"Chest-Supported Row", sets:["6","6"], rest:"90 sec", cue:"Strong, powerful reps without sacrificing position."},
-        {type:"sets", name:"Single-Leg Calf Raise", sets:["8/leg","8/leg"], rest:"60 sec", cue:"Explode through the floor — think about pushing off a wall."}
+        {type:"sets", name:"Chest-Supported Row", sets:["6","6"], rest:"90 sec", cue:"Strong, powerful reps without sacrificing position. Optional if today's short on time."},
+        {type:"sets", name:"Single-Leg Calf Raise", sets:["8/leg","8/leg"], rest:"60 sec", cue:"Explode through the floor — think about pushing off a wall. Ease up if your ankle feels off."}
       ]},
       wed: {label:"Upper + Core Power", note:"Same idea — fast, clean, explosive. Use the least assistance that still lets your pull-ups look fast.", exercises:[
         {type:"sets", name:"DB Bench Press", sets:["5","5","5"], rest:"90 sec", cue:"Drive the weight up quickly without grinding."},
@@ -470,15 +483,14 @@ var CONFIG = {
         {type:"sets", name:"Single-Arm Cable Row", sets:["6/side","6/side"], rest:"60 sec", cue:"Fast pull, controlled return."},
         {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Keep shoulder quality high."},
         {type:"sets", name:"Med Ball Chest Pass", sets:["4","4","4"], rest:"60 sec", cue:"Maximum-speed throw — reset between every rep."},
-        {type:"sets", name:"Hanging Knee Raise", sets:["8","8"], rest:"60 sec", cue:"Controlled core work — no swinging."}
+        {type:"sets", name:"Hanging Knee Raise", sets:["8","8"], rest:"60 sec", cue:"Controlled core work — no swinging. Optional if today's short on time."}
       ]},
       fri: {label:"Full Body + Race Power", note:"This should feel athletic, not like bodybuilding. The contrast pair is the centerpiece of the day — prime your legs, then use it explosively.", exercises:[
-        {type:"sets", name:"Leg Press", sets:["5","5"], rest:"2 min", cue:"Strong reps, but don't grind."},
         {type:"contrast", name:"Leg Press &rarr; Broad Jump", rounds:3, liftReps:"4", jumpReps:"3", restBetween:"20-30 sec", restRounds:"90 sec", cue:"Use the strength movement to prime your legs, then jump explosively."},
         {type:"sets", name:"DB Incline Press", sets:["6","6"], rest:"90 sec", cue:"Powerful, controlled reps."},
         {type:"sets", name:"Med Ball Scoop Toss", sets:["3/side","3/side","3/side"], rest:"60 sec", cue:"Maximum rotational speed."},
         {type:"sets", name:"Bulgarian Split Squat", sets:["6/leg","6/leg"], rest:"75 sec", cue:"Maintain single-leg strength without creating excessive fatigue."},
-        {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Strong brace, resist rotation."}
+        {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Strong brace, resist rotation. Optional if today's short on time."}
       ]}
     }
   },
@@ -636,7 +648,18 @@ var CONFIG = {
     if (note) note.textContent = msgMap[level] || '';
   };
 
+  function renderAnkleStatus(){
+    var el = document.getElementById('ankle-status-content');
+    if (!el) return;
+    var s = CONFIG.ankleStatus || {};
+    var html = '<p class="small">' + (s.note || 'No notes on file.') + '</p>';
+    if (s.coachNotes) html += '<p class="small" style="margin-top:6px;"><strong>Coach Notes:</strong> ' + s.coachNotes + '</p>';
+    if (s.lastUpdated) html += '<p class="small" style="margin-top:6px; color:var(--slate-light);">Last updated: ' + s.lastUpdated + '</p>';
+    el.innerHTML = html;
+  }
+
   function renderHome(){
+    renderAnkleStatus();
     var today = todayMid();
     var block = getPhaseBlock(today);
     document.getElementById('home-phase').textContent = 'Current Phase: ' + (block ? block.label : (today < parseDate(CONFIG.seasonStart) ? 'Not Started Yet' : 'Season Complete'));
