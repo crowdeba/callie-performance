@@ -438,7 +438,7 @@ var CONFIG = {
     1: {
       mon: {label:"Lower + Pull", note:"You already work hard — this isn't about making things harder for the sake of it. It's about giving your competitiveness and work ethic more physical tools to actually use.", exercises:[
         {type:"sets", name:"Goblet Squat", sets:["8","8","8"], rest:"2 min", cue:"Control the descent and keep your chest tall — prioritize clean movement over weight."},
-        {type:"sets", name:"Hip Thrust", sets:["8","8","8"], rest:"90 sec", cue:"Drive through your feet and squeeze hard at the top."},
+        {type:"sets", name:"Glute Bridge", sets:["10","10","10"], rest:"75 sec", cue:"Drive through your heels and squeeze hard at the top — same hip-extension pattern, no barbell across your hips."},
         {type:"sets", name:"Lat Pulldown", sets:["8","8","8"], rest:"90 sec", cue:"Pull with your back — full range of motion, control the return."},
         {type:"sets", name:"Chest-Supported Row", sets:["8","8","8"], rest:"75 sec", cue:"Pull smoothly and finish with a strong upper-back squeeze."},
         {type:"sets", name:"Bulgarian Split Squat", sets:["6/leg","6/leg"], rest:"75 sec", cue:"Stay balanced and controlled — build strength one leg at a time."},
@@ -446,25 +446,24 @@ var CONFIG = {
       ]},
       wed: {label:"Upper + Core", note:"Quality strength that transfers, not volume for volume's sake.", exercises:[
         {type:"sets", name:"DB Bench Press", sets:["8","8","8"], rest:"90 sec", cue:"Controlled lowering, strong drive upward."},
-        {type:"pullup", name:"Assisted Pull-Ups", sets:3, rest:"90 sec", cue:"Use assistance that lets you perform clean reps — gradually reduce it over time. Target 6-8 reps."},
+        {type:"pullup", name:"Band-Assisted Pull-Ups", sets:3, rest:"90 sec", cue:"Use a band that lets you perform clean reps — gradually move to a lighter band over time. Bands are easiest at the bottom, hardest at the top, so expect that to feel different than the machine. Target 6-8 reps."},
         {type:"sets", name:"Landmine Press or DB Shoulder Press", sets:["8","8","8"], rest:"60 sec", cue:"Keep your core stable and press smoothly."},
-        {type:"sets", name:"Single-Arm Cable Row", sets:["8/side","8/side","8/side"], rest:"60 sec", cue:"Resist rotation, connect each pull to your upper back."},
+        {type:"sets", name:"Seated Cable Row", sets:["8","8","8"], rest:"60 sec", cue:"Squeeze your shoulder blades together, connect each pull to your upper back."},
         {type:"sets", name:"Face Pulls", sets:["12","12"], rest:"60 sec", cue:"Keep these controlled — quality shoulder work matters more than weight."},
         {type:"sets", name:"Hanging Knee Raises", sets:["10","10"], rest:"60 sec", cue:"Control the movement, avoid swinging."}
       ]},
       fri: {label:"Full Body + Power", note:"Explosive work stays low volume and high quality — a full reset between reps, every time.", exercises:[
         {type:"sets", name:"Leg Press", sets:["6","6","6"], rest:"2 min", cue:"Strong, controlled reps — leave room to progress."},
         {type:"sets", name:"DB Incline Press", sets:["8","8","8"], rest:"90 sec", cue:"Control the lowering and drive up confidently."},
-        {type:"sets", name:"Med Ball Scoop Toss", sets:["4/side","4/side","4/side"], rest:"60 sec", cue:"Throw with maximum speed — reset completely between reps."},
         {type:"sets", name:"Leg Extension", sets:["10","10"], rest:"60 sec", cue:"Controlled reps — strengthen your legs without chasing failure."},
-        {type:"sets", name:"Broad Jump (Low Volume)", sets:["3","3","3"], rest:"60-90 sec", cue:"Jump explosively and fully reset between attempts."},
+        {type:"sets", name:"Box Jump (Low Volume)", sets:["3","3","3"], rest:"60-90 sec", cue:"Step down, don't jump down — fully reset between attempts. Start with a box height you can land on confidently."},
         {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace your core and resist rotation."}
       ]}
     },
     2: {
       mon: {label:"Lower Strength + Pull", note:"Substantially more strength this phase — the load goes up while every rep stays clean.", exercises:[
         {type:"sets", name:"DB Squat", sets:["6","6","6"], rest:"2 min", cue:"Increase load gradually while keeping every rep clean."},
-        {type:"sets", name:"Hip Thrust", sets:["6","6","6"], rest:"90 sec", cue:"Drive explosively through your feet — don't overextend your back."},
+        {type:"sets", name:"Glute Bridge", sets:["10","10","10"], rest:"75 sec", cue:"Drive explosively through your heels — don't overextend your back."},
         {type:"sets", name:"Lat Pulldown", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Pull hard and control the return."},
         {type:"sets", name:"Chest-Supported Row", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Challenge yourself with weight while maintaining perfect positioning."},
         {type:"sets", name:"Bulgarian Split Squat", sets:["8/leg","8/leg"], rest:"75 sec", cue:"Build single-leg strength and control."},
@@ -472,18 +471,17 @@ var CONFIG = {
       ]},
       wed: {label:"Upper + Core", note:"Same idea, heavier. Try slightly less assistance on pull-ups than Phase 1 — that's real, visible progress.", exercises:[
         {type:"sets", name:"DB Bench Press", sets:["6","6","6"], rest:"90 sec", cue:"Lower under control, drive the weight upward aggressively."},
-        {type:"pullup", name:"Assisted Pull-Ups", sets:3, rest:"90 sec", cue:"Try slightly less assistance than Phase 1. Target 6 reps."},
+        {type:"pullup", name:"Band-Assisted Pull-Ups", sets:3, rest:"90 sec", cue:"Try a slightly lighter band than Phase 1. Target 6 reps."},
         {type:"sets", name:"Landmine Press", sets:["6/side","6/side","6/side"], rest:"60 sec", cue:"Press explosively while keeping your trunk stable."},
-        {type:"sets", name:"Single-Arm Cable Row", sets:["8/side","8/side","8/side"], rest:"60 sec", cue:"Pull strongly without rotating your torso."},
+        {type:"sets", name:"Seated Cable Row", sets:["8","8","8"], rest:"60 sec", cue:"Pull strongly, controlled return."},
         {type:"sets", name:"Face Pulls", sets:["12","12"], rest:"60 sec", cue:"Keep these controlled, focus on shoulder position."},
         {type:"sets", name:"Hanging Knee Raises", sets:["8-10","8-10","8-10"], rest:"60 sec", cue:"Own every rep — no swinging."}
       ]},
       fri: {label:"Full Body + Power", note:"Load goes up on the strength work; the explosive work stays about quality, not fatigue.", exercises:[
         {type:"sets", name:"Leg Press", sets:["6","6","6"], rest:"2 min", cue:"Strong controlled reps — progressively increase load."},
         {type:"sets", name:"DB Incline Press", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Drive upward with intent."},
-        {type:"sets", name:"Med Ball Scoop Toss", sets:["4/side","4/side","4/side"], rest:"60 sec", cue:"Maximum speed — stop if your throws lose explosiveness."},
         {type:"sets", name:"Leg Extension", sets:["8","8"], rest:"60 sec", cue:"Strong controlled reps — don't chase failure."},
-        {type:"sets", name:"Broad Jump", sets:["3","3","3"], rest:"60-90 sec", cue:"Maximum-quality jumps with a full reset."},
+        {type:"sets", name:"Box Jump", sets:["3","3","3"], rest:"60-90 sec", cue:"Step down, don't jump down — full reset between attempts."},
         {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace hard and resist rotation."}
       ]}
     },
@@ -491,31 +489,30 @@ var CONFIG = {
       mon: {label:"Strength &rarr; Start Power", note:"Volume drops, explosive intent goes up. Heavy but crisp — stop before reps get slow or sloppy. This is about producing force fast, not grinding.", exercises:[
         {type:"sets", name:"DB Squat", sets:["5","5","5"], rest:"2 min", cue:"Heavy but crisp — stop before reps become slow or sloppy."},
         {type:"sets", name:"Squat Jump", sets:["3","3","3"], rest:"60-90 sec", cue:"Jump as explosively as possible — focus on speed, not fatigue."},
-        {type:"sets", name:"Hip Thrust", sets:["5","5","5"], rest:"90 sec", cue:"Drive up aggressively and finish with control."},
+        {type:"sets", name:"Glute Bridge", sets:["12","12","12"], rest:"75 sec", cue:"Drive up aggressively and finish with control."},
         {type:"sets", name:"Lat Pulldown", sets:["5","5","5"], rest:"90 sec", cue:"Powerful pull with a controlled return."},
         {type:"sets", name:"Chest-Supported Row", sets:["6","6"], rest:"90 sec", cue:"Strong, powerful reps without sacrificing position. Optional if today's short on time."},
         {type:"sets", name:"Single-Leg Calf Raise", sets:["8/leg","8/leg"], rest:"60 sec", cue:"Explode through the floor — think about pushing off a wall. Ease up if your ankle feels off."}
       ]},
       wed: {label:"Upper + Core Power", note:"Same idea — fast, clean, explosive. Use the least assistance that still lets your pull-ups look fast.", exercises:[
         {type:"sets", name:"DB Bench Press", sets:["5","5","5"], rest:"90 sec", cue:"Drive the weight up quickly without grinding."},
-        {type:"pullup", name:"Assisted Pull-Ups", sets:3, rest:"90 sec", cue:"Use the least assistance that allows fast, clean reps. Target 5 reps."},
+        {type:"pullup", name:"Band-Assisted Pull-Ups", sets:3, rest:"90 sec", cue:"Use the lightest band that allows fast, clean reps. Target 5 reps."},
         {type:"sets", name:"Landmine Press", sets:["5/side","5/side","5/side"], rest:"60 sec", cue:"Explosive press with strong core control."},
-        {type:"sets", name:"Single-Arm Cable Row", sets:["6/side","6/side"], rest:"60 sec", cue:"Fast pull, controlled return."},
+        {type:"sets", name:"Seated Cable Row", sets:["6","6"], rest:"60 sec", cue:"Fast pull, controlled return."},
         {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Keep shoulder quality high."},
         {type:"sets", name:"Med Ball Chest Pass", sets:["4","4","4"], rest:"60 sec", cue:"Maximum-speed throw — reset between every rep."},
         {type:"sets", name:"Hanging Knee Raise", sets:["8","8"], rest:"60 sec", cue:"Controlled core work — no swinging. Optional if today's short on time."}
       ]},
       fri: {label:"Full Body + Race Power", note:"This should feel athletic, not like bodybuilding. The contrast pair is the centerpiece of the day — prime your legs, then use it explosively.", exercises:[
-        {type:"contrast", name:"Leg Press &rarr; Broad Jump", rounds:3, liftReps:"4", jumpReps:"3", restBetween:"20-30 sec", restRounds:"90 sec", cue:"Use the strength movement to prime your legs, then jump explosively."},
+        {type:"contrast", name:"Leg Press &rarr; Box Jump", rounds:3, liftReps:"4", jumpReps:"3", restBetween:"20-30 sec", restRounds:"90 sec", cue:"Use the strength movement to prime your legs, then jump explosively. Step down, don't jump down."},
         {type:"sets", name:"DB Incline Press", sets:["6","6"], rest:"90 sec", cue:"Powerful, controlled reps."},
-        {type:"sets", name:"Med Ball Scoop Toss", sets:["3/side","3/side","3/side"], rest:"60 sec", cue:"Maximum rotational speed."},
         {type:"sets", name:"Bulgarian Split Squat", sets:["6/leg","6/leg"], rest:"75 sec", cue:"Maintain single-leg strength without creating excessive fatigue."},
         {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Strong brace, resist rotation. Optional if today's short on time."}
       ]}
     }
   },
 
-  progressLifts: ["DB Squat","DB Bench Press","Leg Press","Hip Thrust","Broad Jump"]
+  progressLifts: ["DB Squat","DB Bench Press","Leg Press","Glute Bridge","Box Jump"]
 };
 /* ========================= END COACH-EDITABLE SECTION ===================== */
 
@@ -686,7 +683,10 @@ var CONFIG = {
   async function renderCoachMessageBanner(){
     var el = document.getElementById('coach-message-banner');
     if (!el) return;
-    var res = await sb.from('coach_messages').select('id,message,created_at').order('created_at', {ascending:false}).limit(1);
+    var scopedId = await resolveSiteAthleteId();
+    var res = await sb.from('coach_messages').select('id,message,created_at,target_athlete_id')
+      .or('target_athlete_id.is.null' + (scopedId ? ',target_athlete_id.eq.' + scopedId : ''))
+      .order('created_at', {ascending:false}).limit(1);
     if (res.error || !res.data || !res.data.length) return;
     var latest = res.data[0];
     var dismissedId = null;
@@ -717,7 +717,10 @@ var CONFIG = {
     list.style.display = 'block';
     if (label) label.textContent = 'Hide';
     if (pastMessagesLoaded) return;
-    var res = await sb.from('coach_messages').select('message,created_at').order('created_at', {ascending:false}).limit(20);
+    var scopedId = await resolveSiteAthleteId();
+    var res = await sb.from('coach_messages').select('message,created_at,target_athlete_id')
+      .or('target_athlete_id.is.null' + (scopedId ? ',target_athlete_id.eq.' + scopedId : ''))
+      .order('created_at', {ascending:false}).limit(20);
     if (res.error){ list.innerHTML = '<p class="small">Could not load messages.</p>'; return; }
     if (!res.data.length){ list.innerHTML = '<p class="small">No messages yet.</p>'; return; }
     var html = '';
@@ -1316,7 +1319,7 @@ var CONFIG = {
   };
 
   // ---------------- PROGRESS ----------------
-  var progLifts = ['DB Squat','DB Bench Press','Leg Press','Hip Thrust','Broad Jump'];
+  var progLifts = ['DB Squat','DB Bench Press','Leg Press','Glute Bridge','Box Jump'];
   var POWER_TRANSFER_QUESTIONS = [
     'How explosive did I feel in the water?',
     'How powerful did my starts feel?',
@@ -1603,8 +1606,34 @@ var CONFIG = {
   };
 
   // ---------------- INIT ----------------
+  async function backfillExerciseCounts(){
+    if (!auth.athleteId) return;
+    try {
+      var res = await sb.from('workouts').select('id,phase,workout_type').eq('athlete_id', auth.athleteId).eq('completed', true).is('exercises_planned', null);
+      if (res.error || !res.data || !res.data.length) return;
+      for (var i=0;i<res.data.length;i++){
+        var w = res.data[i];
+        var dayObj = CONFIG.program[w.phase] && CONFIG.program[w.phase][w.workout_type];
+        var exercises = (dayObj && dayObj.exercises) || [];
+        if (!exercises.length) continue;
+        var setsRes = await sb.from('workout_sets').select('exercise').eq('workout_id', w.id);
+        var loggedNames = {};
+        (setsRes.data||[]).forEach(function(s){ loggedNames[s.exercise] = true; });
+        var planned = 0, completed = 0;
+        exercises.forEach(function(ex){
+          var cue = (ex.cue||'').toLowerCase();
+          if (cue.indexOf('optional') > -1) return;
+          planned++;
+          if (loggedNames[ex.name] || loggedNames[ex.name+' (1st)'] || loggedNames[ex.name+' (2nd)']) completed++;
+        });
+        await sb.from('workouts').update({ exercises_planned: planned, exercises_completed: completed }).eq('id', w.id);
+      }
+    } catch(e){}
+  }
+
   function initDashboard(){
     renderHome();
+    backfillExerciseCounts();
     var todayBlock = getPhaseBlock(todayMid());
     selectPhase(todayBlock ? todayBlock.phase : 1);
     var wd = todayMid().getDay();
